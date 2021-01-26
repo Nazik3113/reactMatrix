@@ -3,7 +3,7 @@ import styled from "styled-components/macro";
 export const Container = styled.form`
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 600px;
 `;
 export const Inputt = styled.input`
   width: 70px;

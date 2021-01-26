@@ -38,7 +38,7 @@ export function InputContainer() {
           />
         </Input.Wrapper>
         <Input.Wrapper>
-          <Input.Text>X</Input.Text>
+          <Input.Text>X (Closets)</Input.Text>
           <Input.In
             placeholder="X"
             type="text"
