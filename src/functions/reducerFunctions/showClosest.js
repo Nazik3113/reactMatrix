@@ -1,6 +1,6 @@
 export default function showClosest(action) {
   let x = 0;
-  let num = action.x + 1;
+  let num = action.x > 0 ? action.x + 1 : 2;
   const onlUncMatrix = [...action.matrix];
   const oldMatrix = [];
   onlUncMatrix.forEach((item, index) => {
@@ -20,7 +20,11 @@ export default function showClosest(action) {
       x++;
     });
   });
-  const sortedItems = res.sort((a, b) => a.num - b.num).slice(1, num);
+
+  const sortedItems = res
+    .sort((a, b) => a.num - b.num)
+    .slice(action.columns === 1 && action.rows === 1 ? 0 : 1, num);
+
   let itemsWithTrue = null;
 
   for (let i = 0; i < sortedItems.length; i++) {
